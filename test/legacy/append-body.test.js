@@ -10,7 +10,7 @@ const pump = require('pump')
 
 const filePath = path.join(__dirname, '..', '..', 'README.md')
 
-test('addToBody option', { skip: process.platform === 'win32' }, t => {
+test('addToBody option', t => {
   t.plan(8)
 
   const fastify = Fastify()
@@ -63,7 +63,7 @@ test('addToBody option', { skip: process.platform === 'win32' }, t => {
   })
 })
 
-test('addToBody with limit exceeded', { skip: process.platform === 'win32' }, t => {
+test('addToBody with limit exceeded', t => {
   t.plan(5)
 
   const fastify = Fastify()
@@ -106,7 +106,7 @@ test('addToBody with limit exceeded', { skip: process.platform === 'win32' }, t 
   })
 })
 
-test('addToBody option and multiple files', { skip: process.platform === 'win32' }, t => {
+test('addToBody option and multiple files', t => {
   t.plan(7)
 
   const fastify = Fastify()
@@ -183,7 +183,7 @@ test('addToBody option and multiple files', { skip: process.platform === 'win32'
   })
 })
 
-test('addToBody option and multiple files in one field', { skip: process.platform === 'win32' }, t => {
+test('addToBody option and multiple files in one field', t => {
   t.plan(4)
 
   const fastify = Fastify()
@@ -250,7 +250,7 @@ test('addToBody option and multiple files in one field', { skip: process.platfor
   })
 })
 
-test('addToBody option and multiple strings in one field', { skip: process.platform === 'win32' }, t => {
+test('addToBody option and multiple strings in one field', t => {
   t.plan(4)
 
   const fastify = Fastify()
@@ -296,7 +296,7 @@ test('addToBody option and multiple strings in one field', { skip: process.platf
   })
 })
 
-test('addToBody option and custom stream management', { skip: process.platform === 'win32' }, t => {
+test('addToBody option and custom stream management', t => {
   t.plan(7)
 
   const fastify = Fastify()
@@ -355,7 +355,7 @@ test('addToBody option and custom stream management', { skip: process.platform =
   })
 })
 
-test('addToBody option with promise', { skip: process.platform === 'win32' }, t => {
+test('addToBody option with promise', t => {
   t.plan(5)
 
   const fastify = Fastify()
@@ -411,7 +411,7 @@ test('addToBody option with promise', { skip: process.platform === 'win32' }, t 
   })
 })
 
-test('addToBody option with promise in error', { skip: process.platform === 'win32' }, t => {
+test('addToBody option with promise in error', t => {
   t.plan(3)
 
   const fastify = Fastify()
@@ -457,7 +457,7 @@ test('addToBody option with promise in error', { skip: process.platform === 'win
   })
 })
 
-test('addToBody with shared schema', { skip: process.platform === 'win32' }, (t) => {
+test('addToBody with shared schema', (t) => {
   t.plan(9)
 
   const fastify = Fastify()
@@ -531,7 +531,7 @@ test('addToBody with shared schema', { skip: process.platform === 'win32' }, (t)
   })
 })
 
-test('addToBody with shared schema (async/await)', { skip: process.platform === 'win32' }, async (t) => {
+test('addToBody with shared schema (async/await)', async (t) => {
   const fastify = Fastify()
   t.tearDown(fastify.close.bind(fastify))
 
@@ -603,7 +603,7 @@ test('addToBody with shared schema (async/await)', { skip: process.platform === 
   })
 })
 
-test('addToBody with shared schema error', { skip: process.platform === 'win32' }, (t) => {
+test('addToBody with shared schema error', (t) => {
   t.plan(3)
 
   const fastify = Fastify()
@@ -658,7 +658,7 @@ test('addToBody with shared schema error', { skip: process.platform === 'win32' 
   })
 })
 
-test('addToBody without files and shared schema', { skip: process.platform === 'win32' }, t => {
+test('addToBody without files and shared schema', t => {
   t.plan(5)
 
   const fastify = Fastify()
@@ -719,7 +719,7 @@ test('addToBody without files and shared schema', { skip: process.platform === '
   })
 })
 
-test('addToBody option does not change behaviour on not-multipart request', { skip: process.platform === 'win32' }, t => {
+test('addToBody option does not change behaviour on not-multipart request', t => {
   t.plan(2)
 
   const fastify = Fastify()
